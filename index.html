@@ -1,1 +1,34 @@
-<h1>hellow world</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>United WebVR!</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+
+        <!--<a-scene>
+                <a-assets timeout="5000">
+                  <a-asset-item id="tree-obj" src="/Lounge_Final.fbx"></a-asset-item>
+                  
+                </a-assets>
+              
+                <a-entity id="tree" fbx-model="obj: #tree-obj;" crossorigin="anonymous" ></a-entity>
+                
+              </a-scene>-->
+
+              <a-scene>
+                <a-assets>
+                  <a-asset-item id="tree-obj" src="/jupiter.obj"></a-asset-item>
+                  <a-asset-item id="tree-mtl" src="/jupiter.mtl"></a-asset-item>
+                </a-assets>
+                <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl" crossorigin="anonymous"></a-entity>
+              </a-scene>
+              <script>
+              // A-Frame 'loaded' event, because <a-assets> is an A-Frame node
+document.querySelector( 'a-assets' ).addEventListener( 'loaded', () => console.log( 'a-assets loaded' ) );
+// Standard DOM 'load' event, because #field is an <img>
+document.querySelector( '#tree-obj' ).addEventListener( 'load', () => console.log( '#field loaded' ) );
+                    </script>
+  </body>
+</html>
